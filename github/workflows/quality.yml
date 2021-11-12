@@ -1,0 +1,10 @@
+name: quality checks
+on: push
+
+jobs:
+  check_quality: 
+    name: several quality checks 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: grep "Nahira" README.md
